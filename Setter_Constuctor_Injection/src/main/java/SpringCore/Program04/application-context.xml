@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+      <bean id="Book" class ="SpringCore.Program04.Book">
+     
+      <property  name="bookId" value ="101"/>
+      <property name="bookName" value="java"/>
+      <property name="authorName" value="Gems"/>
+      <property name="price" value="500"/>
+      </bean>
+       <bean id="Book2" class="SpringCore.Program04.Book">
+
+        <constructor-arg value="102"/>
+        <constructor-arg value="Spring Framework"/>
+        <constructor-arg value="Rod Johnson"/>
+        <constructor-arg value="850.75"/>
+
+    </bean>
+</beans>
