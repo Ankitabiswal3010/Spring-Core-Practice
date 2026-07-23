@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+      <bean id="AddressSetter" class ="SpringCore.SIwithref.Address">
+     
+      <property  name="city" value ="HYD"/>
+      <property name="pncode" value="500016"/>
+      
+      </bean>
+      <bean id="Employee" class ="SpringCore.SIwithref.Employee">
+         
+      <property name="name" value="Alen"/>
+      <property name="id" value ="101"/>
+      <property  name="address" ref ="AddressSetter"/>
+      
+      </bean>
+      
+</beans>
