@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+     <bean id="library" class ="SpringCore.LibraryManagement.Library" init-method="init"
+      destroy-method="destroy">
+     <property name="libraryCode" value="1021"></property>
+     <property name="libraryName" value="Saraswati"></property>
+     <property name="inChargeperson" value="jhon"></property>
+     <property name="contactNumber" value="988535412"></property>
+     <property name="genres">
+     <list>
+     <value>java</value>
+     <value>HTML</value>
+     </list>
+     </property>
+     </bean>
+      <bean id="library2" class ="SpringCore.LibraryManagement.Library" 
+      init-method="init" destroy-method="destroy" autowire-candidate="false">
+     <property name="libraryCode" value="1025"></property>
+     <property name="libraryName" value="Connemara"></property>
+     <property name="inChargeperson" value="Alen"></property>
+     <property name="contactNumber" value="988573412"></property>
+     <property name="genres">
+     <list>
+     <value>Story Book</value>
+     <value>Science fiction</value>
+     </list>
+     </property>
+     </bean>
+      
+      
+   
+   <bean id="libraryService" class="SpringCore.LibraryManagement.LibraryService" 
+   autowire="byType">
+   
+   </bean>
+
+</beans>
